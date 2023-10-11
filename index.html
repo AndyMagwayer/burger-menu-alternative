@@ -1,12 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>burger-menu-alternative</title>
-    <link rel="stylesheet" href="">
+<title>Burger Menu Alternative</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 </head>
 <body>
-    
+<div class="burger-menu">
+   <div class="burger-icon" onclick="toggleMenu()">☰</div>
+   <div class="side-menu" id="sidebar">
+      <ul>
+         <li>Home</li>
+         <li>About</li>
+         <li>Contact</li>
+      </ul>
+   </div>
+</div>
+<h1>Welcome to My Website!</h1>
+
+<style>
+   .burger-menu {
+      position: relative;
+      display: inline-block;
+   }
+   .burger-icon {
+      cursor: pointer;
+   }
+   .side-menu {
+      position: absolute;
+      top: 0;
+      left: -200px;
+      width: 200px;
+      height: 100vh;
+      background-color: gray;
+      transition: left 0.3s ease;
+   }
+   .close {
+      left: 0;
+   }
+</style>
+
+<script>
+   function toggleMenu() {
+      var sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("close");
+   }
+</script>
+
 </body>
 </html>

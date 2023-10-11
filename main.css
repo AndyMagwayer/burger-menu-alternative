@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+.burger-menu {
+    position: relative;
+    display: inline-block;
+ }
+ .burger-icon {
+    cursor: pointer;
+ }
+ .side-menu {
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100vh;
+    background-color: gray;
+    transition: left 0.3s ease;
+ }
+ .close {
+    left: 0;
+ }
